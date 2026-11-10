@@ -11,7 +11,7 @@ public class BoothController : MonoBehaviour
     [Header("Player Panels")]
     [SerializeField] private GameObject[] playerPanels = new GameObject[6];
 
-    private string[] playerPasswords = new string[6] { "One", "Two", "Three", "Four", "Five", "Six" };
+    private string[] playerPasswords = new string[6] { "ONE", "TWO", "THREE", "FOUR", "FIVE", "SIX" };
 
     private void Start()
     {
@@ -23,6 +23,11 @@ public class BoothController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return))
         {
             SubmitCode();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            CloseBook();
         }
     }
 
@@ -41,9 +46,10 @@ public class BoothController : MonoBehaviour
                 index = i;
                 break;
             }
+           
         }
 
-        if(!CodeMatches)
+        if(CodeMatches == false)
         {
             HidePlayerPanels();
             errorText.text = "Invalid code. Please enter P1 through P6.";
