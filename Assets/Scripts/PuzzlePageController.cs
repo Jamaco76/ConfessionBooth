@@ -9,6 +9,8 @@ public class PuzzlePageController : MonoBehaviour
     [SerializeField] private TMP_Text PageNumber;
     [SerializeField] bool isBlank;
     
+    [SerializeField] GameObject[] dontClick;
+    
     public void SetPuzzleIntroText(string text)
     {
         puzzleIntroText.text = text;
@@ -20,5 +22,15 @@ public class PuzzlePageController : MonoBehaviour
     public void SetPageNumber(string pageNumber)
     {
         PageNumber.text = pageNumber.ToString();
+    }
+
+    public bool IsBlank()
+    {
+        return isBlank;
+    }
+
+    public GameObject[] GetObjectsNotToClick()
+    {
+        return dontClick;
     }
 }

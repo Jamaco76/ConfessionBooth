@@ -1183,7 +1183,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7608697857134373017}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3234384937542657602}
+        m_TargetAssemblyTypeName: PlayerPuzzleController, Assembly-CSharp
+        m_MethodName: ClosePlayerPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6383317545972816993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1545,6 +1557,7 @@ GameObject:
   - component: {fileID: 8959443715213374568}
   - component: {fileID: 4517072821478245179}
   - component: {fileID: 4207569122280537986}
+  - component: {fileID: 712833297272586849}
   m_Layer: 0
   m_Name: Book
   m_TagString: Untagged
@@ -1611,6 +1624,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &712833297272586849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7653101855685805206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42c511e1b5acb9841ad03ff35ba45e92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BookController
+  LeftPanel: {fileID: 3850328498195939667}
+  RightPanel: {fileID: 7397378378961797209}
 --- !u!1 &7703819059837735160
 GameObject:
   m_ObjectHideFlags: 0
@@ -1710,6 +1737,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerPuzzleController
   codeInput: {fileID: 8541061911660709722}
   submitButton: {fileID: 8000948127628022224}
+  exitButton: {fileID: 5096567864050298460}
   panelPrefab: {fileID: 6043613967422667144, guid: 37936c52b8183e94eaf86e4c8807ee7b, type: 3}
   blankpanelPrefab: {fileID: 6043613967422667144, guid: dcb4b71a04adb9e48ac800e78a9609d9, type: 3}
   puzzleManager: {fileID: 0}

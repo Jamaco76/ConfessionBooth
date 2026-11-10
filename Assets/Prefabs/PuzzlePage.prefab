@@ -119,7 +119,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1749157816717201992}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!114 &5576363983470683534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,8 +248,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -233.06577}
-  m_SizeDelta: {x: 550, y: 243.9382}
+  m_AnchoredPosition: {x: 0, y: -265.64526}
+  m_SizeDelta: {x: 550, y: 178.7792}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7659674288503052643
 CanvasRenderer:
@@ -346,7 +346,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 60.119568, z: -1.4126892, w: 0}
+  m_margin: {x: 0, y: -0.4940796, z: -1.4126892, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1002,7 +1002,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5093077217840145152}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!114 &3384990127737577665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1129,6 +1129,17 @@ MonoBehaviour:
   puzzleIntroText: {fileID: 4410307399361872315}
   VotingResultText: {fileID: 2802359125391831519}
   PageNumber: {fileID: 4878686072366878794}
+  isBlank: 0
+  dontClick:
+  - {fileID: 3148788372059883370}
+  - {fileID: 7038141354698407610}
+  - {fileID: 1749157816717201992}
+  - {fileID: 3635721328188325613}
+  - {fileID: 1823649576576084883}
+  - {fileID: 5093077217840145152}
+  - {fileID: 352016122416011146}
+  - {fileID: 8063119594835688209}
+  - {fileID: 3866775016582080490}
 --- !u!1 &7038141354698407610
 GameObject:
   m_ObjectHideFlags: 0

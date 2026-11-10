@@ -9,6 +9,7 @@ public class PlayerPuzzleController : MonoBehaviour
 
     [SerializeField] private TMP_InputField codeInput;
     [SerializeField] private Button submitButton;
+    [SerializeField] private Button exitButton;
     [SerializeField] private GameObject panelPrefab;
     [SerializeField] private GameObject blankpanelPrefab;
     [SerializeField] private PuzzleManager puzzleManager;
@@ -90,10 +91,15 @@ public class PlayerPuzzleController : MonoBehaviour
                 return;
             }
             
-            
-            Debug.Log("Puzzle not found");
-            
         }
 
+        Debug.Log("Puzzle not found");
+
+    }
+
+    public void ClosePlayerPanel()
+    {
+        this.gameObject.SetActive(false);
+        puzzleManager.GetComponent<RectTransform>().gameObject.SetActive(true);
     }
 }

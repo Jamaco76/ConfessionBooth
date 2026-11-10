@@ -146,7 +146,7 @@ PrefabInstance:
     - target: {fileID: 3234384937542657602, guid: a3835e15114779e4890fded871f114b2, type: 3}
       propertyPath: puzzleManager
       value: 
-      objectReference: {fileID: 828577522}
+      objectReference: {fileID: 1960283007}
     - target: {fileID: 7703819059837735160, guid: a3835e15114779e4890fded871f114b2, type: 3}
       propertyPath: m_Name
       value: PlayrePanel_4
@@ -588,7 +588,7 @@ PrefabInstance:
     - target: {fileID: 3234384937542657602, guid: a3835e15114779e4890fded871f114b2, type: 3}
       propertyPath: puzzleManager
       value: 
-      objectReference: {fileID: 828577522}
+      objectReference: {fileID: 1960283007}
     - target: {fileID: 7703819059837735160, guid: a3835e15114779e4890fded871f114b2, type: 3}
       propertyPath: m_Name
       value: PlayrePanel_3
@@ -705,7 +705,7 @@ PrefabInstance:
     - target: {fileID: 3234384937542657602, guid: a3835e15114779e4890fded871f114b2, type: 3}
       propertyPath: puzzleManager
       value: 
-      objectReference: {fileID: 828577522}
+      objectReference: {fileID: 1960283007}
     - target: {fileID: 7703819059837735160, guid: a3835e15114779e4890fded871f114b2, type: 3}
       propertyPath: m_Name
       value: PlayrePanel_5
@@ -816,7 +816,7 @@ PrefabInstance:
     - target: {fileID: 3234384937542657602, guid: a3835e15114779e4890fded871f114b2, type: 3}
       propertyPath: puzzleManager
       value: 
-      objectReference: {fileID: 828577522}
+      objectReference: {fileID: 1960283007}
     - target: {fileID: 3849671610052814118, guid: a3835e15114779e4890fded871f114b2, type: 3}
       propertyPath: m_text
       value: -=- II -=-
@@ -1003,77 +1003,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8311105104410143861, guid: a3835e15114779e4890fded871f114b2, type: 3}
   m_PrefabInstance: {fileID: 582178758}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &828577519
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 828577520}
-  - component: {fileID: 828577521}
-  - component: {fileID: 828577522}
-  m_Layer: 0
-  m_Name: GameController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &828577520
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 828577519}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &828577521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 828577519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 097e716a27408134eac6a32a47f62a43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  codeInput: {fileID: 1552455080}
-  inputPanel: {fileID: 1960283003}
-  errorText: {fileID: 1114431677}
-  playerPanels:
-  - {fileID: 641805842}
-  - {fileID: 1839558797}
-  - {fileID: 1011350640}
-  - {fileID: 90613120}
-  - {fileID: 124309226}
-  - {fileID: 1933529084}
---- !u!114 &828577522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 828577519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0cd81fef14e8ad45926e0e82434ef54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PuzzleManager
-  allPuzzles:
-  - {fileID: 11400000, guid: 8662c3bc1a74c324f901c65f1073ce06, type: 2}
-  - {fileID: 11400000, guid: f808fa543066a3149b748a1e185ef174, type: 2}
-  - {fileID: 11400000, guid: f4d8ca7f6c3d29b40b6cec383fb1b499, type: 2}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1461,7 +1390,7 @@ PrefabInstance:
     - target: {fileID: 3234384937542657602, guid: a3835e15114779e4890fded871f114b2, type: 3}
       propertyPath: puzzleManager
       value: 
-      objectReference: {fileID: 828577522}
+      objectReference: {fileID: 1960283007}
     - target: {fileID: 7703819059837735160, guid: a3835e15114779e4890fded871f114b2, type: 3}
       propertyPath: m_Name
       value: PlayrePanel_2
@@ -1994,7 +1923,7 @@ PrefabInstance:
     - target: {fileID: 3234384937542657602, guid: a3835e15114779e4890fded871f114b2, type: 3}
       propertyPath: puzzleManager
       value: 
-      objectReference: {fileID: 828577522}
+      objectReference: {fileID: 1960283007}
     - target: {fileID: 7703819059837735160, guid: a3835e15114779e4890fded871f114b2, type: 3}
       propertyPath: m_Name
       value: PlayrePanel_1
@@ -2123,8 +2052,10 @@ GameObject:
   - component: {fileID: 1960283004}
   - component: {fileID: 1960283006}
   - component: {fileID: 1960283005}
+  - component: {fileID: 1960283008}
+  - component: {fileID: 1960283007}
   m_Layer: 5
-  m_Name: Image
+  m_Name: InputPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2190,6 +2121,47 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960283003}
   m_CullTransparentMesh: 1
+--- !u!114 &1960283007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960283003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0cd81fef14e8ad45926e0e82434ef54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuzzleManager
+  allPuzzles:
+  - {fileID: 11400000, guid: 8662c3bc1a74c324f901c65f1073ce06, type: 2}
+  - {fileID: 11400000, guid: f808fa543066a3149b748a1e185ef174, type: 2}
+  - {fileID: 11400000, guid: f4d8ca7f6c3d29b40b6cec383fb1b499, type: 2}
+  - {fileID: 11400000, guid: 3a069e9408f2afd44887f93425d00b9d, type: 2}
+  - {fileID: 11400000, guid: af42eb9119f14c3469c0c1107d6cb9bc, type: 2}
+  - {fileID: 11400000, guid: 67bdc4b0223e9fd4394d5cdef4f6f142, type: 2}
+--- !u!114 &1960283008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960283003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 097e716a27408134eac6a32a47f62a43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  codeInput: {fileID: 1552455080}
+  inputPanel: {fileID: 1960283003}
+  errorText: {fileID: 1114431677}
+  playerPanels:
+  - {fileID: 641805842}
+  - {fileID: 1839558797}
+  - {fileID: 1011350640}
+  - {fileID: 90613120}
+  - {fileID: 124309226}
+  - {fileID: 1933529084}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2198,5 +2170,4 @@ SceneRoots:
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 610354545}
-  - {fileID: 828577520}
   - {fileID: 1440875120}
