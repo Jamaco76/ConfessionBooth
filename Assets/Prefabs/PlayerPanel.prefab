@@ -1651,7 +1651,7 @@ GameObject:
   - component: {fileID: 6459419991980542407}
   - component: {fileID: 3234384937542657602}
   m_Layer: 0
-  m_Name: PlayrePanel
+  m_Name: PlayerPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

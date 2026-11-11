@@ -35,6 +35,7 @@ public class PlayerPuzzleController : MonoBehaviour
 
             lpPage.SetPuzzleIntroText(puzzle.introPrompt);
             lpPage.SetPageNumber("-=- " + Numerials[pageCreated] + " -=-");
+            lpPage.SetPuzzleCode(puzzle.code);
             pageCreated++;
 
             if (pageCreated % 2 == 1)
@@ -62,6 +63,8 @@ public class PlayerPuzzleController : MonoBehaviour
             
             rpPage.SetPuzzleIntroText(puzzle.introPrompt);
             rpPage.SetPageNumber("-=- " + Numerials[pageCreated] + " -=-");
+            rpPage.SetPuzzleCode(puzzle.code);
+
             pageCreated++;
 
             

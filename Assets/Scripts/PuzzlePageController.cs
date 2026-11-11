@@ -11,6 +11,8 @@ public class PuzzlePageController : MonoBehaviour
     
     [SerializeField] GameObject[] dontClick;
     
+    private string puzzleCode;
+
     public void SetPuzzleIntroText(string text)
     {
         puzzleIntroText.text = text;
@@ -32,5 +34,15 @@ public class PuzzlePageController : MonoBehaviour
     public GameObject[] GetObjectsNotToClick()
     {
         return dontClick;
+    }
+
+    public void SetPuzzleCode(string code)
+    {
+        puzzleCode = code;
+    }
+
+    public string GetPuzzleCode()
+    {
+        return puzzleCode;
     }
 }
