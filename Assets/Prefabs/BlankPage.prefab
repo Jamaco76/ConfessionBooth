@@ -230,3 +230,4 @@ MonoBehaviour:
   VotingResultText: {fileID: 4878686072366878794}
   PageNumber: {fileID: 4878686072366878794}
   isBlank: 1
+  dontClick: []

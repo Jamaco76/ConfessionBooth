@@ -10,66 +10,50 @@ public class PlayerPuzzleController : MonoBehaviour
     [SerializeField] private TMP_InputField codeInput;
     [SerializeField] private Button submitButton;
     [SerializeField] private Button exitButton;
-    [SerializeField] private GameObject panelPrefab;
+    [SerializeField] private GameObject PuzzlePagePrefab;
+    [SerializeField] private GameObject NotesPrefab;
     [SerializeField] private GameObject blankpanelPrefab;
     [SerializeField] private PuzzleManager puzzleManager;
     [SerializeField] private Transform LeftParent;
     [SerializeField] private Transform RightParent;
 
 
-    //when true left parent will be used, when false right parent will be used
-    private bool LastPanelCreated = true;
     private int pageCreated = 0;
-    private string[] Numerials = new string[15] 
+    private string[] Numerials = new string[30]
     { "I", "II", "III", "IV", "V", 
         "VI", "VII", "VIII", "IX", "X", 
-            "XI", "XII", "XIII", "XIV", "XV" };
+            "XI", "XII", "XIII", "XIV", "XV",
+                "XVI", "XVII", "XVIII", "XIX", "XX",
+                    "XXI", "XXII", "XXIII", "XXIV", "XXV",
+                        "XXVI", "XXVII", "XXVIII", "XXIX", "XXX" };
     private List<string> puzzlesEntered = new List<string>();
 
     public void CreateNewPuzzlePanel(PuzzleData puzzle)
     {
-        if (LastPanelCreated)
+        if (pageCreated == 0)
         {
-            GameObject leftpanel = Instantiate(panelPrefab, LeftParent);
-            PuzzlePageController lpPage = leftpanel.GetComponent<PuzzlePageController>();
-
-            lpPage.SetPuzzleIntroText(puzzle.introPrompt);
-            lpPage.SetPageNumber("-=- " + Numerials[pageCreated] + " -=-");
-            lpPage.SetPuzzleCode(puzzle.code);
-            pageCreated++;
-
-            if (pageCreated % 2 == 1)
-            {
-                GameObject rightpanel = Instantiate(blankpanelPrefab, RightParent);
-                PuzzlePageController rpPage = rightpanel.GetComponent<PuzzlePageController>();
-                rpPage.SetPageNumber("-=- " + Numerials[pageCreated] + " -=-");
-
-            }
-
-            if(pageCreated == 1)
+            if (LeftParent.childCount > 0)
             {
                 Destroy(LeftParent.GetChild(0).gameObject);
-                Destroy(RightParent.GetChild(0).gameObject);
             }
 
-            LastPanelCreated = false;
+            if (RightParent.childCount > 0)
+            {
+                Destroy(RightParent.GetChild(0).gameObject);
+            }
         }
-        else
-        {
-            Destroy(RightParent.GetChild(RightParent.childCount-1).gameObject);
 
-            GameObject rightpanel = Instantiate(panelPrefab, RightParent);
-            PuzzlePageController rpPage = rightpanel.GetComponent<PuzzlePageController>();
-            
-            rpPage.SetPuzzleIntroText(puzzle.introPrompt);
-            rpPage.SetPageNumber("-=- " + Numerials[pageCreated] + " -=-");
-            rpPage.SetPuzzleCode(puzzle.code);
+        GameObject leftPanel = Instantiate(PuzzlePagePrefab, LeftParent);
+        PuzzlePageController leftPage = leftPanel.GetComponent<PuzzlePageController>();
+        leftPage.SetPuzzleIntroText(puzzle.introPrompt);
+        leftPage.SetPageNumber("-=- " + Numerials[pageCreated] + " -=-");
+        leftPage.SetPuzzleCode(puzzle.code);
 
-            pageCreated++;
+        GameObject rightPanel = Instantiate(NotesPrefab, RightParent);
+        PuzzlePageController rightPage = rightPanel.GetComponent<PuzzlePageController>();
+        rightPage.SetPageNumber("-=- " + Numerials[pageCreated + 1] + " -=-");
 
-            
-            LastPanelCreated = true;
-        }
+        pageCreated += 2;
     }
 
     public void CheckCode()
