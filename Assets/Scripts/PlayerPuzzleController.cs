@@ -48,6 +48,7 @@ public class PlayerPuzzleController : MonoBehaviour
         leftPage.SetPuzzleIntroText(puzzle.introPrompt);
         leftPage.SetPageNumber("-=- " + Numerials[pageCreated] + " -=-");
         leftPage.SetPuzzleCode(puzzle.code);
+        leftPage.SetVotingResultText(puzzle.votingPrompts[Random.Range(0, puzzle.votingPrompts.Length-1)]);
 
         GameObject rightPanel = Instantiate(NotesPrefab, RightParent);
         PuzzlePageController rightPage = rightPanel.GetComponent<PuzzlePageController>();

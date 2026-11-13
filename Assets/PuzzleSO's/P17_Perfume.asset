@@ -10,15 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cfed4700ee263d74b9adcf01983d4b69, type: 3}
-  m_Name: Test 5
+  m_Name: P17_Perfume
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleData
-  puzzleName: Test03
-  code: VI
-  introPrompt: This is just a test VI puzzle my child
+  puzzleName: Perfume
+  code: XVII
+  introPrompt: An unusual perfume, you say? I suspect its purpose was rather less
+    innocent than its fragrance.
   votingPrompts:
-  - 'you have done well to find this '
-  - most intersting of infromation young one
-  - may inlightnement find you
+  - You have done well to find this
+  - Most intersting of infromation young one
+  - May inlightnement find you my child.
+  - God bless thy soul.
+  - May you travle the path to absolution with ease.
+  - The house of god will always welcome you.
   votingOptions:
   - P_ONE
   - P_TWO

@@ -101,9 +101,7 @@ public class BookController : MonoBehaviour, IPointerClickHandler
                 return false;
             }
         }
-      
-        Debug.Log(clickedObject.gameObject);
-
+   
         Transform clickedTransform = clickedObject.transform;
         return clickedTransform == panel.transform || clickedTransform.IsChildOf(panel.transform);
     }

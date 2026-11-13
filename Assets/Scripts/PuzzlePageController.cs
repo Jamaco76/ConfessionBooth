@@ -6,6 +6,7 @@ public class PuzzlePageController : MonoBehaviour
 {
     [SerializeField] private TMP_Text puzzleIntroText;
     [SerializeField] private TMP_Text VotingResultText;
+    [SerializeField] private TMP_Text VotingResultMessage;
     [SerializeField] private TMP_Text PageNumber;
     [SerializeField] bool isBlank;
     
@@ -24,6 +25,11 @@ public class PuzzlePageController : MonoBehaviour
     public void SetPageNumber(string pageNumber)
     {
         PageNumber.text = pageNumber.ToString();
+    }
+
+    public void SetVotingResultMessage(string text)
+    {
+        VotingResultMessage.text = text;
     }
 
     public bool IsBlank()

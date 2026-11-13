@@ -156,7 +156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1386750577863034330
 RectTransform:
   m_ObjectHideFlags: 0
@@ -173,8 +173,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -265.64526}
-  m_SizeDelta: {x: 550, y: 178.7792}
+  m_AnchoredPosition: {x: 0, y: -233.5}
+  m_SizeDelta: {x: 550, y: 243.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7659674288503052643
 CanvasRenderer:
@@ -204,8 +204,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: here will be the text to give a response based on the voting decisons of
-    the player
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5cc0a6f061c177c49801f93c9b2a000d, type: 2}
   m_sharedMaterial: {fileID: -7086114097438636905, guid: 5cc0a6f061c177c49801f93c9b2a000d, type: 2}
@@ -647,6 +646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   puzzleIntroText: {fileID: 4410307399361872315}
   VotingResultText: {fileID: 2802359125391831519}
+  VotingResultMessage: {fileID: 2802359125391831519}
   PageNumber: {fileID: 4878686072366878794}
   isBlank: 0
   dontClick:
@@ -1004,6 +1004,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7375581758632123530, guid: 61c0747f194b51e4d9ff3e18363a848c, type: 3}
+      propertyPath: ConfirmButton
+      value: 
+      objectReference: {fileID: 7038141354698407610}
     - target: {fileID: 7375581758632123530, guid: 61c0747f194b51e4d9ff3e18363a848c, type: 3}
       propertyPath: VotingMessage
       value: 

@@ -496,6 +496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ba528ae7ab08547acb0f94ffad9ccb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  playerPanel: {fileID: 0}
   VotingImages:
   - {fileID: 227423453543129090}
   - {fileID: 5997183948593633592}
@@ -518,6 +519,9 @@ MonoBehaviour:
   - {fileID: 2836941196899709710}
   - {fileID: 9191161538666134257}
   VotingResults: 
+  VotingMessage: {fileID: 0}
+  ConfirmButton: {fileID: 0}
+  playerVotingTotalTracker: {fileID: 0}
 --- !u!1 &2103217806324324513
 GameObject:
   m_ObjectHideFlags: 0

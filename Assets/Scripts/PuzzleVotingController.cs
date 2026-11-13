@@ -4,20 +4,20 @@ using TMPro;
 
 public class PuzzleVotingController : MonoBehaviour
 {
+    [SerializeField] private GameObject playerPanel;
     [SerializeField] private GameObject[] VotingImages;
     [SerializeField] private GameObject[] VotingHighlightNames;
     [SerializeField] private GameObject[] VotingIdicators;
     [SerializeField] private bool[] VotingResults;
     [SerializeField] private TMP_Text VotingMessage;
+    [SerializeField] private GameObject ConfirmButton;
+
     [SerializeField] private PlayerVotingTotalTracker playerVotingTotalTracker;
-    private PuzzleManager puzzleManager;
-    private PuzzlePageController currentPuzzlePage;
+  
 
     private void Start()
     {
-        puzzleManager = FindAnyObjectByType<PuzzleManager>();
-        currentPuzzlePage = GetComponentInParent<PuzzlePageController>();
-
+        
         AddPointerHandlers();
         SetAllObjectsActive(VotingHighlightNames, false);
         SetAllObjectsActive(VotingIdicators, false);
@@ -27,17 +27,25 @@ public class PuzzleVotingController : MonoBehaviour
         {
             VotingResults = new bool[indicatorCount];
         }
+
     }
 
     public void SetVotingResults()
     {
-        int resultCount = Mathf.Min(VotingResults.Length, VotingIdicators.Length);
+        PlayerPuzzleController playerPuzzleController = GetComponentInParent<PlayerPuzzleController>();
+        playerPanel = playerPuzzleController.gameObject;
+        playerVotingTotalTracker = playerPanel.GetComponentInChildren<PlayerVotingTotalTracker>(true);
+      
 
-        for (int i = 0; i < resultCount; i++)
+        int indicatorCount = VotingIdicators == null ? 0 : VotingIdicators.Length;
+
+        for (int i = 0; i < indicatorCount; i++)
         {
             VotingResults[i] = VotingIdicators[i] != null && VotingIdicators[i].activeSelf;
         }
 
+        VotingMessage.gameObject.SetActive(true);
+        ConfirmButton.SetActive(false);
         playerVotingTotalTracker.UpdateTotals();
     }
 

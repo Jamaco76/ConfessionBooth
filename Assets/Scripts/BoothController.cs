@@ -6,6 +6,7 @@ public class BoothController : MonoBehaviour
     [Header("Input")]
     [SerializeField] private TMP_InputField codeInput;
     [SerializeField] private GameObject inputPanel;
+    [SerializeField] private GameObject endTotalsPanel;
     [SerializeField] private TMP_Text errorText;
 
     [Header("Player Panels")]
@@ -23,8 +24,9 @@ public class BoothController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return))
         {
             SubmitCode();
-        }
 
+        }
+        
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             CloseBook();
@@ -37,6 +39,13 @@ public class BoothController : MonoBehaviour
         string code = codeInput.text.Trim().ToUpperInvariant();
         bool CodeMatches = false;
         int index = 0;
+
+        if (code.Equals("END"))
+        {
+            endTotalsPanel.SetActive(true);
+            return;
+        }
+
 
         for(int i = 0; i < playerPasswords.Length; i++)
         {

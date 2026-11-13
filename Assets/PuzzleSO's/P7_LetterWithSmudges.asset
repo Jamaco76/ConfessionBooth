@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfed4700ee263d74b9adcf01983d4b69, type: 3}
+  m_Name: P7_LetterWithSmudges
+  m_EditorClassIdentifier: Assembly-CSharp::PuzzleData
+  puzzleName: LetterWithSmudges
+  code: VII
+  introPrompt: Smudged ink, you say? Perhaps someone thought their words best left
+    unread.
+  votingPrompts:
+  - You have done well to find this
+  - Most intersting of infromation young one
+  - May inlightnement find you my child.
+  - God bless thy soul.
+  - May you travle the path to absolution with ease.
+  - The house of god will always welcome you.
+  votingOptions:
+  - P_ONE
+  - P_TWO
+  - P_THREE
+  - P_FOUR
+  - P_FIVE
+  - P_SIX
+  correctOptions: 000000000000000000000000010000000000000000000000
+  votingResults: 000000000000000000000000000000000000000000000000

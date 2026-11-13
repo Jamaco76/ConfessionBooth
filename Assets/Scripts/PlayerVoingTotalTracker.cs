@@ -1,48 +1,61 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class PlayerVotingTotalTracker : MonoBehaviour
 {
-    [SerializeField] GameObject PlayerPanel;
-    [SerializeField] TMP_Text[] voteTotalTexts;
-    private PuzzleVotingController[] puzzleVotingControllers;
-    private bool[][] puzzleVotes;
-    private int[] voteTotals = new int[6];
-    private string[] Numerials = new string[30]
-    { "I", "II", "III", "IV", "V",
-        "VI", "VII", "VIII", "IX", "X",
-            "XI", "XII", "XIII", "XIV", "XV",
-                "XVI", "XVII", "XVIII", "XIX", "XX",
-                    "XXI", "XXII", "XXIII", "XXIV", "XXV",
-                        "XXVI", "XXVII", "XXVIII", "XXIX", "XXX" };
+    [SerializeField] private GameObject PlayerPanel;
+    [SerializeField] private TMP_Text[] voteTotalTexts;
+    [SerializeField] private List<PuzzleVotingController> puzzleVotingControllers = new List<PuzzleVotingController>();
+    private int[] voteTotals;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private string[] Numerials = new string[16]
+    { "n","I", "II", "III", "IV", "V",
+        "VI", "VII", "VIII", "IX", "X",
+            "XI", "XII", "XIII", "XIV", "XV"};
+
+    private void Start()
     {
-        puzzleVotingControllers = PlayerPanel.GetComponentsInChildren<PuzzleVotingController>();
+        UpdateTotals();
     }
 
     public void UpdateTotals()
     {
-        puzzleVotingControllers = PlayerPanel.GetComponentsInChildren<PuzzleVotingController>();
+        
 
-        for (int i = 0; i < puzzleVotingControllers.Length; i++) {
+        puzzleVotingControllers = new List<PuzzleVotingController>(PlayerPanel.GetComponentsInChildren<PuzzleVotingController>(true));
+        voteTotals = new int[voteTotalTexts == null ? 0 : voteTotalTexts.Length];
 
-            puzzleVotes[i] = puzzleVotingControllers[i].getVotes();
-        }
-
-        for (int i = 0; i < puzzleVotes.Length; i++)
+        foreach (PuzzleVotingController votingController in puzzleVotingControllers)
         {
-            for (int j = 0; j < puzzleVotes[i].Length; j++)
+   
+            bool[] votes = votingController.getVotes();
+           
+            int voteCount = Mathf.Min(votes.Length, voteTotals.Length);
+            for (int i = 0; i < voteCount; i++)
             {
-                if(puzzleVotes[i][j] == true)
+                if (votes[i])
                 {
-                    voteTotals[j]++;
-                    voteTotalTexts[j].text = Numerials[voteTotals[j]];
+                    voteTotals[i]++;
                 }
             }
         }
 
+        for (int i = 0; i < voteTotals.Length; i++)
+        {
+            if (voteTotalTexts[i] != null)
+            {
+                voteTotalTexts[i].text = voteTotals[i] < Numerials.Length
+                    ? Numerials[voteTotals[i]]
+                    : voteTotals[i].ToString();
+            }
+        }
+
+    }
+
+    public int[] GetVoteTotals()
+    {
+        return voteTotals == null ? new int[0] : (int[])voteTotals.Clone();
     }
     
 }
