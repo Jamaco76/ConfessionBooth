@@ -2,13 +2,14 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
 
-public class PuzzlelVotingController : MonoBehaviour
+public class PuzzleVotingController : MonoBehaviour
 {
     [SerializeField] private GameObject[] VotingImages;
     [SerializeField] private GameObject[] VotingHighlightNames;
     [SerializeField] private GameObject[] VotingIdicators;
     [SerializeField] private bool[] VotingResults;
     [SerializeField] private TMP_Text VotingMessage;
+    [SerializeField] private PlayerVotingTotalTracker playerVotingTotalTracker;
     private PuzzleManager puzzleManager;
     private PuzzlePageController currentPuzzlePage;
 
@@ -36,7 +37,8 @@ public class PuzzlelVotingController : MonoBehaviour
         {
             VotingResults[i] = VotingIdicators[i] != null && VotingIdicators[i].activeSelf;
         }
-       
+
+        playerVotingTotalTracker.UpdateTotals();
     }
 
     private void AddPointerHandlers()
@@ -93,12 +95,17 @@ public class PuzzlelVotingController : MonoBehaviour
         }
     }
 
+    public bool[] getVotes()
+    {
+        return VotingResults;
+    }
+
     private sealed class VotingImagePointerHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
     {
-        private PuzzlelVotingController controller;
+        private PuzzleVotingController controller;
         private int index;
 
-        public void Initialize(PuzzlelVotingController votingController, int imageIndex)
+        public void Initialize(PuzzleVotingController votingController, int imageIndex)
         {
             controller = votingController;
             index = imageIndex;

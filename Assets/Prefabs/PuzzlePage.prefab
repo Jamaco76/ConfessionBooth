@@ -1004,6 +1004,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7375581758632123530, guid: 61c0747f194b51e4d9ff3e18363a848c, type: 3}
+      propertyPath: VotingMessage
+      value: 
+      objectReference: {fileID: 2802359125391831519}
     - target: {fileID: 8454859017443616128, guid: 61c0747f194b51e4d9ff3e18363a848c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
