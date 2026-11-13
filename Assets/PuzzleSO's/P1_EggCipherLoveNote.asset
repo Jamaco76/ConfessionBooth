@@ -23,11 +23,11 @@ MonoBehaviour:
   - May you travle the path to absolution with ease.
   - The house of god will always welcome you.
   votingOptions:
-  - P_ONE
-  - P_TWO
-  - P_THREE
-  - P_FOUR
-  - P_FIVE
-  - P_SIX
+  - Joseph Louis-Renou Pampadour
+  - Narcisse Leopold Deschamps
+  - Melodie Octavia Cantrelle
+  - Pierre Dauck Bonfils
+  - Felicte Renee Chance
+  - Priscille Daphnee Gisele Brillante
   correctOptions: 000000000000000000000000000000000000000000000000
   votingResults: 000000000000000000000000000000000000000000000000

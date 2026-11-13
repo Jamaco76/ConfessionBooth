@@ -61,7 +61,7 @@ public class BoothController : MonoBehaviour
         if(CodeMatches == false)
         {
             HidePlayerPanels();
-            errorText.text = "Invalid code. Please enter P1 through P6.";
+            errorText.text = "You dare lie to me child? please tell me the truth of who you are.";
             return;
         }
 
